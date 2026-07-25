@@ -1289,15 +1289,67 @@ MENU BANDAS
     transition:.3s;
 }
 
+.barra-topo {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-topo-conteudo {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: noticias 20s linear infinite;
+}
+
+.barra-topo-conteudo span {
+    flex-shrink: 0;
+    margin: 0 15px; /* Espaçamento fixo */
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+@keyframes noticias {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <div class="barra-topo">
-            <span>ENTREGA GRÁTIS ACIMA DE R$ 120,00</span>
-        </div>
+<div class="barra-topo">
+    <div class="barra-topo-conteudo">
+        <span>Entrega grátis acima de R$ 120,00</span>
+        <span>•</span>
+        <span>Camisetas 100% Algodão</span>
+        <span>•</span>
+        <span>Envio em até 1h</span>
+        <span>•</span>
+        <span>Parcelamos no cartão</span>
+        <span>•</span>
+
+        <!-- Cópia para o loop infinito -->
+        <span>Entrega grátis acima de R$ 120,00</span>
+        <span>•</span>
+        <span>Camisetas 100% Algodão</span>
+        <span>•</span>
+        <span>Envio em até 1h</span>
+        <span>•</span>
+        <span>Parcelamos no cartão</span>
+        <span>•</span>
+    </div>
+</div>
         <header>
             <div class="header-container">
                 <a href="#" class="home-icon" onclick="voltarHome()">
